@@ -89,6 +89,8 @@ let s:orange      = { "gui": "#FD9720", "cterm": "208" }
 let s:purple      = { "gui": "#ae81ff", "cterm": "141" }
 let s:red         = { "gui": "#e73c50", "cterm": "196" }
 let s:darkred     = { "gui": "#5f0000", "cterm": "52" }
+let s:orange      = { "gui": "#d78700", "cterm": "172" }
+let s:commentcolor = { "gui": "#afaf5f", "cterm": "143" }
 
 let s:addfg       = { "gui": "#d7ffaf", "cterm": "193" }
 let s:addbg       = { "gui": "#5f875f", "cterm": "65" }
@@ -105,8 +107,8 @@ call s:h("ColorColumn",   {                     "bg": s:lightblack })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:darkblack })
 call s:h("NonText",       { "fg": s:lightgrey })
-call s:h("StatusLine",    { "fg": s:coolgrey,   "bg": s:black,        "format": "reverse" })
-call s:h("StatusLineNC",  { "fg": s:darkgrey,   "bg": s:coolgrey,     "format": "reverse" })
+call s:h("StatusLine",    { "fg": s:darkred,    "bg": s:black,        "format": "reverse" })
+call s:h("StatusLineNC",  { "fg": s:red,        "bg": s:red,          "format": "reverse" })
 call s:h("TabLine",       { "fg": s:white,      "bg": s:darkblack,    "format": "reverse" })
 call s:h("Visual",        {                     "bg": s:lightgrey })
 call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
@@ -117,7 +119,7 @@ call s:h("MoreMsg",       { "fg": s:yellow })
 call s:h("ErrorMsg",      { "fg": s:black,      "bg": s:red,          "format": "standout" })
 call s:h("WarningMsg",    { "fg": s:red })
 call s:h("VertSplit",     { "fg": s:grey,       "bg": s:darkgrey })
-call s:h("LineNr",        { "fg": s:grey,       "bg": s:darkgrey })
+call s:h("LineNr",        { "fg": s:orange,     "bg": s:darkgrey })
 call s:h("CursorLineNr",  { "fg": s:aqua,       "bg": s:darkblack })
 call s:h("SignColumn",    {                     "bg": s:lightblack })
 
@@ -183,7 +185,7 @@ call s:h("Tag",           { "fg": s:pink })
 "        Debug"
 
 call s:h("Todo",          { "fg": s:aqua,   "format": "bold,italic" })
-call s:h("Comment",       { "fg": s:coolgrey, "format": "italic" })
+call s:h("Comment",       { "fg": s:commentcolor, "format": "italic" })
 
 call s:h("Underlined",    { "fg": s:green })
 call s:h("Ignore",        {})
